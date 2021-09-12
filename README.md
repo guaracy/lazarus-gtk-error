@@ -1,0 +1,1 @@
+# lazarus-gtk-error
