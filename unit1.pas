@@ -5,35 +5,21 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, StdCtrls,
-  ExtCtrls;
+  Buttons, Forms, Graphics, StdCtrls;
+  //Classes, Buttons, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    BitBtn1: TBitBtn;
-    BitBtn10: TBitBtn;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
-    BitBtn4: TBitBtn;
-    BitBtn5: TBitBtn;
-    BitBtn6: TBitBtn;
-    BitBtn7: TBitBtn;
-    BitBtn8: TBitBtn;
-    BitBtn9: TBitBtn;
-    Image1: TImage;
-    Image10: TImage;
-    Image2: TImage;
-    Image3: TImage;
-    Image4: TImage;
-    Image5: TImage;
-    Image6: TImage;
-    Image7: TImage;
-    Image8: TImage;
-    Image9: TImage;
-    Label1: TLabel;
+    btn18: TBitBtn;
+    btn20: TBitBtn;
+    btn24: TBitBtn;
+    btn36: TBitBtn;
+    btn48: TBitBtn;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
   private
 
   public
@@ -46,6 +32,20 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  Pic:TPicture;
+begin
+  Pic:=TPicture.Create;
+  Pic.LoadFromFile('res/ic_add_alert_maroon_20px.png');
+  btn20.Glyph.Assign(Pic.Bitmap);
+  Pic.LoadFromFile('res/ic_add_alert_maroon_36px.png');
+  btn36.Glyph.Assign(Pic.Bitmap);
+  Pic.Free;
+end;
 
 end.
 
